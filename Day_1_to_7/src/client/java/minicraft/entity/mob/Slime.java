@@ -71,7 +71,16 @@ public class Slime extends EnemyMob {
 
 	public void die() {
 		dropItem(1, Game.isMode("minicraft.settings.mode.score") ? 2 : 4 - Settings.getIdx("diff"), Items.get("slime"));
+		if (this.lvl > 1) {  // Chỉ tách nếu level > 1 (để tránh spawn vô hạn)
+			for (int i = 0; i < 2; i++) {
+				Slime child = new Slime(this.lvl - 1);   // Slime cấp nhỏ hơn
+				child.x = this.x + (random.nextInt(11) - 5);   // spawn lệch nhẹ
+				child.y = this.y + (random.nextInt(11) - 5);
 
+				child.health = child.maxHealth / 2;  // Cho slime con máu thấp hơn
+				level.add(child);  // Thêm vào map
+			}
+		}
 		super.die(); // Parent death call
 	}
 }
