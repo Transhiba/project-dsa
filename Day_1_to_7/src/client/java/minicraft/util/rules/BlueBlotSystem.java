@@ -13,15 +13,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Tracks and renders blue blots on the player based on hit count.
- * Converts hits to blot visuals using the sprite system.
- *
- * Logic:
- * - Mỗi lần player bị hurt: tăng hitCount.
- * - Đủ 3 hit (HITS_PER_BLOT) => reset hitCount, tăng blotCount lên 1.
- * - Nếu blotCount >= 2 => gọi die() cho Game.player (game over).
- */
+
 public class BlueBlotSystem {
 	private static final int HITS_PER_BLOT = 3; // 3 hits = 1 blot
 	private static final Map<Player, Integer> playerHitCounts = new HashMap<>();  // hitCount cho từng player
@@ -34,9 +26,7 @@ public class BlueBlotSystem {
 		loadBlotTextures();
 	}
 
-	/**
-	 * Load blue blot texture images and register them with the sprite linker.
-	 */
+	
 	private static void loadBlotTextures() {
 		try {
 			// Load blot textures from resources
@@ -74,18 +64,18 @@ public class BlueBlotSystem {
 	public static void onPlayerHurt(Player player) {
 		if (player == null) return;
 
-		// Tăng hitCount mỗi lần bị đánh
+		
 		int hitCount = playerHitCounts.getOrDefault(player, 0) + 1;
 		playerHitCounts.put(player, hitCount);
 
-		// Đủ HITS_PER_BLOT hit => +1 blot, reset hitCount
+		
 		if (hitCount >= HITS_PER_BLOT) {
-			playerHitCounts.put(player, 0); // reset để đếm đợt sau
+			playerHitCounts.put(player, 0); 
 
 			int blotCount = playerBlotCounts.getOrDefault(player, 0) + 1;
 			playerBlotCounts.put(player, blotCount);
 
-			// Nếu có từ 2 đốm xanh trở lên thì cho player chết (game over logic sẽ xử lý tiếp)
+			
 			if (blotCount >= 2 && player == Game.player) {
 				player.die();
 			}
@@ -93,7 +83,7 @@ public class BlueBlotSystem {
 	}
 
 	/**
-	 * Adds a blue blot to the player (manual add, nếu cần).
+	 * Adds a blue blot to the player 
 	 */
 	public static void addBlueBlot(Player player) {
 		if (player == null) return;
@@ -110,7 +100,7 @@ public class BlueBlotSystem {
 	}
 
 	/**
-	 * Resets the blot & hit count for a player (dùng khi respawn / reset rule).
+	 * Resets the blot & hit count for a player 
 	 */
 	public static void resetBlueBlots(Player player) {
 		if (player == null) return;
@@ -149,4 +139,3 @@ public class BlueBlotSystem {
 		}
 	}
 }
-
