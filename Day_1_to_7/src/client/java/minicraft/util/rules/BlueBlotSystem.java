@@ -29,29 +29,28 @@ public class BlueBlotSystem {
 	
 	private static void loadBlotTextures() {
 		try {
-			// Load blot textures from resources
-			BufferedImage blot1Image = ImageIO.read(BlueBlotSystem.class.getResourceAsStream("/assets/rules/blueblot_1.png"));
-			BufferedImage blot2Image = null;
+			// Ảnh mặc định cho cả 1 đốm và 2 đốm (đảm bảo luôn có)
+			BufferedImage blot1Image = ImageIO.read(
+				BlueBlotSystem.class.getResourceAsStream("/assets/rules/blueblot_1.png")
+			);
+			BufferedImage blot2Image = blot1Image; // mặc định: dùng chung nếu không có file thứ 2
 
-			// Try to load the second blot image, fallback to first if not present
+			// Cố gắng load ảnh riêng cho 2 đốm (nếu tồn tại), nếu lỗi thì giữ nguyên blot2Image = blot1Image
 			try {
-				blot2Image = ImageIO.read(BlueBlotSystem.class.getResourceAsStream("/assets/rules/blue_blot_2.png"));
-			} catch (Exception e) {
-				blot2Image = blot1Image; // Fallback to first image if second not found
-			}
+				blot2Image = ImageIO.read(
+					BlueBlotSystem.class.getResourceAsStream("/assets/rules/blueblot_2.png")
+				);
+			} catch (Exception ignored) { /* dùng lại ảnh 1 đốm */ }
 
-			// Convert to MinicraftImage and register with sprite linker
 			if (Renderer.spriteLinker != null) {
 				MinicraftImage img1 = new MinicraftImage(blot1Image);
 				MinicraftImage img2 = new MinicraftImage(blot2Image);
 
-				// Register sprites with the sprite system
 				Renderer.spriteLinker.setSprite(SpriteLinker.SpriteType.Item, "blueblot_1", img1);
-				Renderer.spriteLinker.setSprite(SpriteLinker.SpriteType.Item, "blue_blot_2", img2);
+				Renderer.spriteLinker.setSprite(SpriteLinker.SpriteType.Item, "blueblot_2", img2);
 
-				// Create linked sprites
 				blotSprite1 = new SpriteLinker.LinkedSprite(SpriteLinker.SpriteType.Item, "blueblot_1");
-				blotSprite2 = new SpriteLinker.LinkedSprite(SpriteLinker.SpriteType.Item, "blue_blot_2");
+				blotSprite2 = new SpriteLinker.LinkedSprite(SpriteLinker.SpriteType.Item, "blueblot_2");
 			}
 		} catch (IOException e) {
 			System.err.println("Warning: Could not load blue blot textures: " + e.getMessage());
