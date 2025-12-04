@@ -29,18 +29,16 @@ public class BlueBlotSystem {
 	
 	private static void loadBlotTextures() {
 		try {
-			// Ảnh mặc định cho cả 1 đốm và 2 đốm (đảm bảo luôn có)
 			BufferedImage blot1Image = ImageIO.read(
 				BlueBlotSystem.class.getResourceAsStream("/assets/rules/blueblot_1.png")
 			);
-			BufferedImage blot2Image = blot1Image; // mặc định: dùng chung nếu không có file thứ 2
+			BufferedImage blot2Image = blot1Image; 
 
-			// Cố gắng load ảnh riêng cho 2 đốm (nếu tồn tại), nếu lỗi thì giữ nguyên blot2Image = blot1Image
 			try {
-				blot2Image = ImageIO.read(
-					BlueBlotSystem.class.getResourceAsStream("/assets/rules/blueblot_2.png")
-				);
-			} catch (Exception ignored) { /* dùng lại ảnh 1 đốm */ }
+				blot2Image = ImageIO.read(BlueBlotSystem.class.getResourceAsStream("/assets/rules/blueblot_2.png"));
+			} catch (Exception ignored) {
+				blot2Image = blot1Image; 
+			}
 
 			if (Renderer.spriteLinker != null) {
 				MinicraftImage img1 = new MinicraftImage(blot1Image);
@@ -63,18 +61,19 @@ public class BlueBlotSystem {
 	public static void onPlayerHurt(Player player) {
 		if (player == null) return;
 
-		
+		// increase hit count
 		int hitCount = playerHitCounts.getOrDefault(player, 0) + 1;
 		playerHitCounts.put(player, hitCount);
 
-		
+		// 3 hits = 1 blot
 		if (hitCount >= HITS_PER_BLOT) {
 			playerHitCounts.put(player, 0); 
 
-			int blotCount = playerBlotCounts.getOrDefault(player, 0) + 1;
-			playerBlotCounts.put(player, blotCount);
-
-			
+			// if no blot, add a new blot
+			// if already has 1 blot, add a new blot
+			addBlueBlot(player);
+			// when player has 2 or more blots, die (game over)
+			int blotCount = getBlueBlotCount(player);
 			if (blotCount >= 2 && player == Game.player) {
 				player.die();
 			}

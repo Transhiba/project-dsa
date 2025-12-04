@@ -1,0 +1,13 @@
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'Time: 15m 05s' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'Score: 44' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'Time: 15m 07s' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'Score: 30' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'Time: 15m 10s' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'Score: 20' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'Time: 15m 12s' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'Score: 14' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'Are you sure you want to delete
+§,ÍWW"hc"§Æ,,?
+This can not be undone!' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'ENTER to confirm' is unlocalized.
+[Localization.java#L51] [minicraft.core.io.Localization#getLocalized]:  en-US: 'ESCAPE to cancel' is unlocalized.

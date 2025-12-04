@@ -82,6 +82,7 @@ public class Level {
 	private final Set<Entity> entities = java.util.Collections.synchronizedSet(new HashSet<>()); // A list of all the entities in the world
 	private final Set<Player> players = java.util.Collections.synchronizedSet(new HashSet<>()); // A list of all the players in the world
 	private static final Set<String> shownHints = new HashSet<>(); // Tracks which contextual hints have been shown
+	private int nextNightWarningTick = 0; // cooldown tick for night monster warning
 	private final List<Entity> entitiesToAdd = new ArrayList<>(); /// entities that will be added to the level on next tick are stored here. This is for the sake of multithreading optimization. (hopefully)
 	private final List<Entity> entitiesToRemove = new ArrayList<>(); /// entities that will be removed from the level on next tick are stored here. This is for the sake of multithreading optimization. (hopefully)
 
@@ -518,8 +519,11 @@ public class Level {
 		// Giảm spam: chỉ kiểm tra mỗi 20 tick (~1 lần/giây tuỳ FPS logic)
 		if (Updater.tickCount % 20 != 0) return;
 
-		// Điều kiện "trời tối" gần giống với phần render ánh sáng trong Renderer
-		boolean isDark = Updater.tickCount < Updater.dayLength / 4
+		// if still in cooldown, skip
+		if (Updater.tickCount < nextNightWarningTick) return;
+
+		// check if it's night
+			boolean isDark = Updater.tickCount < Updater.dayLength / 4
 			|| Updater.tickCount > Updater.dayLength / 2;
 		if (!isDark) return;
 
@@ -538,8 +542,10 @@ public class Level {
 				double dist = Math.sqrt(dx * dx + dy * dy);
 
 				if (dist <= warningDistancePixels) {
-					Updater.notifyAll("Cảnh báo: Có quái vật rất gần bạn trong bóng tối!");
-					// Chỉ cần cảnh báo một lần cho mỗi lần gọi hàm
+					Updater.notifyAll("Warning: There is a monster very close to you in the dark!");
+					// Set cooldown to about 4 seconds before showing again
+					nextNightWarningTick = Updater.tickCount + 4 * Updater.normSpeed;
+					// only notify once per call
 					return;
 				}
 			}

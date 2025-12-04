@@ -1,18 +1,286 @@
-22:04:08.419 [Game Handler] DEBUG: Determined gameDir: C:\Users\Asus\AppData\Roaming/playminicraft/mods/Minicraft_Plus
-22:04:09.033 [Controller] DEBUG: No Controllers Detected, moving on.
-22:04:09.130 [Resource Handler/Resource Pack] DEBUG: Refreshing from [file:/D:/IU/2025-2026/DSA/Project/project-dsa/Day_1_to_7/src/client/bin/main/]
-22:04:09.341 [Resource Handler/Resource Pack] WARN: Potentially incompatible image detected: assets/textures/gui/osk.png in pack: Default: image size (48x28) is not in multiple of 8.
-22:04:09.846 [Sprite] DEBUG: Updating all LinkedSprite.
-22:04:09.848 [Resource Handler/Localization] TRACE: Loading language...
-22:04:09.857 [Resource Handler/Skin] DEBUG: Refreshing skins.
-22:04:09.866 [Tiles] DEBUG: Initializing tile list...
-22:04:10.071 [World] DEBUG: Resetting...
-22:04:10.075 [Resource Handler/Localization] TRACE: Loading language...
-22:04:10.147 [Resource Handler/Resource Pack] WARN: Potentially incompatible image detected: assets/textures/gui/osk.png in pack: Default: image size (48x28) is not in multiple of 8.
-22:04:10.515 [Sprite] DEBUG: Updating all LinkedSprite.
-22:04:10.515 [Resource Handler/Localization] TRACE: Loading language...
-22:04:10.520 [Achievement] DEBUG: Updating data of achievement with id: minicraft.achievement.skin.
-22:04:10.520 [Achievement] DEBUG: Updating data of achievement with id: minicraft.achievement.woodcutter.
-22:04:10.520 [Achievement] DEBUG: Updating data of achievement with id: minicraft.achievement.lowest_caves.
-22:04:10.577 [Network] DEBUG: Fetching release list from GitHub...
-22:04:14.695 [Game Handler] INFO: Window closing
+15:56:08.379 [Game Handler] DEBUG: Determined gameDir: C:\Users\Asus\AppData\Roaming/playminicraft/mods/Minicraft_Plus
+15:56:08.469 [Controller] DEBUG: No Controllers Detected, moving on.
+15:56:08.673 [Resource Handler/Resource Pack] DEBUG: Refreshing from [file:/D:/IU/2025-2026/DSA/Project/project-dsa/Day_1_to_7/src/client/bin/main/]
+15:56:08.832 [Resource Handler/Resource Pack] WARN: Potentially incompatible image detected: assets/textures/gui/osk.png in pack: Default: image size (48x28) is not in multiple of 8.
+15:56:09.318 [Sprite] DEBUG: Updating all LinkedSprite.
+15:56:09.318 [Resource Handler/Localization] TRACE: Loading language...
+15:56:09.324 [Resource Handler/Skin] DEBUG: Refreshing skins.
+15:56:09.337 [Tiles] DEBUG: Initializing tile list...
+15:56:09.436 [World] DEBUG: Resetting...
+15:56:09.438 [Resource Handler/Localization] TRACE: Loading language...
+15:56:09.510 [Resource Handler/Resource Pack] WARN: Potentially incompatible image detected: assets/textures/gui/osk.png in pack: Default: image size (48x28) is not in multiple of 8.
+15:56:09.855 [Sprite] DEBUG: Updating all LinkedSprite.
+15:56:09.855 [Resource Handler/Localization] TRACE: Loading language...
+15:56:09.859 [Achievement] DEBUG: Updating data of achievement with id: minicraft.achievement.skin.
+15:56:09.859 [Achievement] DEBUG: Updating data of achievement with id: minicraft.achievement.woodcutter.
+15:56:09.859 [Achievement] DEBUG: Updating data of achievement with id: minicraft.achievement.lowest_caves.
+15:56:09.908 [Network] DEBUG: Fetching release list from GitHub...
+15:56:11.255 [Game Handler] DEBUG: Updating worlds list.
+15:56:11.602 [Game Handler] DEBUG: Updating worlds list.
+15:56:12.454 [World] DEBUG: Resetting world...
+15:56:12.454 [World] DEBUG: Resetting...
+15:56:12.454 [World] TRACE: Initializing world non-client...
+15:56:13.225 [World/HC] DEBUG: Found 20 chests.
+15:56:13.232 [World] TRACE: World initialized.
+15:56:13.241 [World] TRACE: Removing player from level Level(depth=-1)
+15:56:14.253 [LOC] TRACE: en-US: 'Time: 15m 05s' is unlocalized.
+15:56:14.253 [LOC] TRACE: en-US: 'Score: 44' is unlocalized.
+15:56:15.303 [Game Handler] DEBUG: Updating worlds list.
+15:56:15.952 [Game Handler] DEBUG: Updating worlds list.
+15:56:16.789 [World] DEBUG: Resetting world...
+15:56:16.789 [World] DEBUG: Resetting...
+15:56:16.789 [World] TRACE: Initializing world non-client...
+15:56:17.319 [World/HC] DEBUG: Found 20 chests.
+15:56:17.322 [World] TRACE: World initialized.
+15:56:17.337 [World] TRACE: Removing player from level Level(depth=-1)
+15:56:18.354 [LOC] TRACE: en-US: 'Time: 15m 07s' is unlocalized.
+15:56:18.354 [LOC] TRACE: en-US: 'Score: 30' is unlocalized.
+15:56:20.113 [Game Handler] DEBUG: Updating worlds list.
+15:56:20.804 [Game Handler] DEBUG: Updating worlds list.
+15:56:21.941 [World] DEBUG: Resetting world...
+15:56:21.941 [World] DEBUG: Resetting...
+15:56:21.941 [World] TRACE: Initializing world non-client...
+15:56:22.453 [World/HC] DEBUG: Found 20 chests.
+15:56:22.454 [World] TRACE: World initialized.
+15:56:22.473 [World] TRACE: Removing player from level Level(depth=-1)
+15:56:23.484 [LOC] TRACE: en-US: 'Time: 15m 10s' is unlocalized.
+15:56:23.484 [LOC] TRACE: en-US: 'Score: 20' is unlocalized.
+15:56:24.448 [Game Handler] DEBUG: Updating worlds list.
+15:56:25.385 [Game Handler] DEBUG: Updating worlds list.
+15:56:27.537 [World] DEBUG: Resetting world...
+15:56:27.537 [World] DEBUG: Resetting...
+15:56:27.537 [World] TRACE: Initializing world non-client...
+15:56:28.027 [World/HC] DEBUG: Found 20 chests.
+15:56:28.028 [World] TRACE: World initialized.
+15:56:28.037 [World] TRACE: Removing player from level Level(depth=-1)
+15:56:29.053 [LOC] TRACE: en-US: 'Time: 15m 12s' is unlocalized.
+15:56:29.053 [LOC] TRACE: en-US: 'Score: 14' is unlocalized.
+15:56:30.564 [Game Handler] DEBUG: Updating worlds list.
+15:56:31.635 [Game Handler] DEBUG: Updating worlds list.
+15:56:33.819 [LOC] TRACE: en-US: 'Are you sure you want to delete
+§,ÍWW"hc"§Æ,,?
+This can not be undone!' is unlocalized.
+15:56:33.819 [LOC] TRACE: en-US: 'ENTER to confirm' is unlocalized.
+15:56:33.819 [LOC] TRACE: en-US: 'ESCAPE to cancel' is unlocalized.
+15:56:34.269 [Game Handler] DEBUG: Deleting world: C:\Users\Asus\AppData\Roaming\playminicraft\mods\Minicraft_Plus\saves\hc
+15:56:34.272 [Game Handler] DEBUG: Updating worlds list.
+15:56:46.702 [World] DEBUG: Resetting world...
+15:56:46.702 [World] DEBUG: Resetting...
+15:56:46.702 [World] TRACE: Initializing world non-client...
+15:56:46.705 [World] TRACE: Generating level 1...
+15:56:46.707 [World] DEBUG: Making level 1...
+15:56:46.811 [World] TRACE: Generating level 0...
+15:56:46.813 [World] DEBUG: Making level 0...
+15:56:46.889 [World] TRACE: Setting tiles around 99,1 to hard rock
+15:56:46.889 [World] TRACE: Setting tiles around 66,2 to hard rock
+15:56:46.889 [World] TRACE: Setting tiles around 76,23 to hard rock
+15:56:46.891 [World] TRACE: Setting tiles around 7,52 to hard rock
+15:56:46.891 [World] TRACE: Setting tiles around 98,53 to hard rock
+15:56:46.891 [World] TRACE: Setting tiles around 126,68 to hard rock
+15:56:46.891 [World] TRACE: Setting tiles around 53,80 to hard rock
+15:56:46.892 [World] TRACE: Setting tiles around 115,93 to hard rock
+15:56:46.892 [World] TRACE: Setting tiles around 25,103 to hard rock
+15:56:46.892 [World] TRACE: Setting tiles around 81,104 to hard rock
+15:56:46.893 [World] TRACE: Generating level -1...
+15:56:46.895 [World] DEBUG: Making level -1...
+15:56:46.964 [Items] ERROR: Requested invalid item with name: 'TNT'
+15:56:46.965 [Items] ERROR: Requested invalid item with name: 'YELLOW CLOTHES'
+15:56:46.965 [Items] ERROR: Requested invalid item with name: 'BLACK CLOTHES'
+15:56:46.965 [Items] ERROR: Requested invalid item with name: 'ORANGE CLOTHES'
+15:56:46.965 [Items] ERROR: Requested invalid item with name: 'CYAN CLOTHES'
+15:56:46.965 [Items] ERROR: Requested invalid item with name: 'PURPLE CLOTHES'
+15:56:46.965 [Items] ERROR: Requested invalid item with name: 'TNT'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'YELLOW CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'BLACK CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'ORANGE CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'CYAN CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'PURPLE CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'TNT'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'YELLOW CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'BLACK CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'ORANGE CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'CYAN CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'PURPLE CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'TNT'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'YELLOW CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'BLACK CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'ORANGE CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'CYAN CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'PURPLE CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'TNT'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'YELLOW CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'BLACK CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'ORANGE CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'CYAN CLOTHES'
+15:56:46.966 [Items] ERROR: Requested invalid item with name: 'PURPLE CLOTHES'
+15:56:46.969 [World] TRACE: Generating level -2...
+15:56:46.971 [World] DEBUG: Making level -2...
+15:56:47.048 [Items] ERROR: Requested invalid item with name: 'TNT'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'YELLOW CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'BLACK CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'ORANGE CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'CYAN CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'PURPLE CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'TNT'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'YELLOW CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'BLACK CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'ORANGE CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'CYAN CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'PURPLE CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'TNT'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'YELLOW CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'BLACK CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'ORANGE CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'CYAN CLOTHES'
+15:56:47.049 [Items] ERROR: Requested invalid item with name: 'PURPLE CLOTHES'
+15:56:47.051 [World] TRACE: Generating level -3...
+15:56:47.052 [World] DEBUG: Making level -3...
+15:56:47.127 [World] TRACE: Generating level -4...
+15:56:47.128 [World] DEBUG: Making level -4...
+15:56:47.207 [World] TRACE: Level generation complete.
+15:56:47.209 [World] TRACE: World initialized.
+15:56:47.237 [Game Handler] DEBUG: Updating worlds list.
+15:56:47.595 [World] TRACE: Setting tiles around 7,52 to hard rock
+15:56:47.596 [World] TRACE: Setting tiles around 25,103 to hard rock
+15:56:47.596 [World] TRACE: Setting tiles around 53,80 to hard rock
+15:56:47.671 [World] TRACE: Setting tiles around 66,2 to hard rock
+15:56:47.671 [World] TRACE: Setting tiles around 76,23 to hard rock
+15:56:47.671 [World] TRACE: Setting tiles around 98,53 to hard rock
+15:56:47.671 [World] TRACE: Setting tiles around 99,1 to hard rock
+15:56:47.672 [World] TRACE: Setting tiles around 81,104 to hard rock
+15:56:47.673 [World] TRACE: Setting tiles around 115,93 to hard rock
+15:56:47.673 [World] TRACE: Setting tiles around 126,68 to hard rock
+15:56:48.813 [World] TRACE: Setting tiles around -140,-121 to hard rock
+15:56:48.814 [World] TRACE: Setting tiles around -191,-49 to hard rock
+15:56:48.816 [World] TRACE: Setting tiles around -181,105 to hard rock
+15:56:48.816 [World] TRACE: Setting tiles around -179,82 to hard rock
+15:56:48.816 [World] TRACE: Setting tiles around -163,84 to hard rock
+15:56:48.816 [World] TRACE: Setting tiles around -149,83 to hard rock
+15:56:48.817 [World] TRACE: Setting tiles around -160,159 to hard rock
+15:56:48.818 [World] TRACE: Setting tiles around -167,244 to hard rock
+15:56:48.818 [World] TRACE: Setting tiles around -145,226 to hard rock
+15:56:48.818 [World] TRACE: Setting tiles around -132,235 to hard rock
+15:56:48.818 [World] TRACE: Setting tiles around -190,258 to hard rock
+15:56:48.835 [World] TRACE: Setting tiles around -109,-93 to hard rock
+15:56:48.835 [World] TRACE: Setting tiles around -91,-120 to hard rock
+15:56:48.836 [World] TRACE: Setting tiles around -73,-101 to hard rock
+15:56:48.836 [World] TRACE: Setting tiles around -120,-27 to hard rock
+15:56:48.836 [World] TRACE: Setting tiles around -82,-64 to hard rock
+15:56:48.839 [World] TRACE: Setting tiles around -88,103 to hard rock
+15:56:48.839 [World] TRACE: Setting tiles around -70,77 to hard rock
+15:56:48.839 [World] TRACE: Setting tiles around -70,103 to hard rock
+15:56:48.839 [World] TRACE: Setting tiles around -66,93 to hard rock
+15:56:48.840 [World] TRACE: Setting tiles around -115,158 to hard rock
+15:56:48.842 [World] TRACE: Setting tiles around -64,-83 to hard rock
+15:56:48.842 [World] TRACE: Setting tiles around -59,-92 to hard rock
+15:56:48.842 [World] TRACE: Setting tiles around -40,-123 to hard rock
+15:56:48.843 [World] TRACE: Setting tiles around -13,-8 to hard rock
+15:56:48.843 [World] TRACE: Setting tiles around -28,17 to hard rock
+15:56:48.844 [World] TRACE: Setting tiles around -15,54 to hard rock
+15:56:48.844 [World] TRACE: Setting tiles around -14,15 to hard rock
+15:56:48.844 [World] TRACE: Setting tiles around -14,37 to hard rock
+15:56:48.845 [World] TRACE: Setting tiles around -28,168 to hard rock
+15:56:48.845 [World] TRACE: Setting tiles around -20,142 to hard rock
+15:56:48.845 [World] TRACE: Setting tiles around -62,213 to hard rock
+15:56:48.846 [World] TRACE: Setting tiles around -47,315 to hard rock
+15:56:48.847 [World] TRACE: Setting tiles around 63,-85 to hard rock
+15:56:48.848 [World] TRACE: Setting tiles around 32,-14 to hard rock
+15:56:48.849 [World] TRACE: Setting tiles around 3,234 to hard rock
+15:56:48.849 [World] TRACE: Setting tiles around 11,226 to hard rock
+15:56:48.849 [World] TRACE: Setting tiles around 24,234 to hard rock
+15:56:48.849 [World] TRACE: Setting tiles around 14,318 to hard rock
+15:56:48.849 [World] TRACE: Setting tiles around 15,277 to hard rock
+15:56:48.849 [World] TRACE: Setting tiles around 15,300 to hard rock
+15:56:48.851 [World] TRACE: Setting tiles around 73,-74 to hard rock
+15:56:48.852 [World] TRACE: Setting tiles around 83,-61 to hard rock
+15:56:48.852 [World] TRACE: Setting tiles around 95,-44 to hard rock
+15:56:48.852 [World] TRACE: Setting tiles around 118,-53 to hard rock
+15:56:48.853 [World] TRACE: Setting tiles around 77,131 to hard rock
+15:56:48.853 [World] TRACE: Setting tiles around 80,173 to hard rock
+15:56:48.853 [World] TRACE: Setting tiles around 92,169 to hard rock
+15:56:48.854 [World] TRACE: Setting tiles around 118,244 to hard rock
+15:56:48.855 [World] TRACE: Setting tiles around 116,280 to hard rock
+15:56:48.856 [World] TRACE: Setting tiles around 146,-6 to hard rock
+15:56:48.857 [World] TRACE: Setting tiles around 149,61 to hard rock
+15:56:48.857 [World] TRACE: Setting tiles around 159,14 to hard rock
+15:56:48.858 [World] TRACE: Setting tiles around 152,121 to hard rock
+15:56:48.858 [World] TRACE: Setting tiles around 164,178 to hard rock
+15:56:48.859 [World] TRACE: Setting tiles around 179,154 to hard rock
+15:56:48.859 [World] TRACE: Setting tiles around 166,249 to hard rock
+15:56:48.860 [World] TRACE: Setting tiles around 186,242 to hard rock
+15:56:48.860 [World] TRACE: Setting tiles around 185,297 to hard rock
+15:56:48.861 [World] TRACE: Setting tiles around 212,-101 to hard rock
+15:56:48.861 [World] TRACE: Setting tiles around 219,-100 to hard rock
+15:56:48.861 [World] TRACE: Setting tiles around 253,-127 to hard rock
+15:56:48.861 [World] TRACE: Setting tiles around 224,-19 to hard rock
+15:56:48.861 [World] TRACE: Setting tiles around 233,-45 to hard rock
+15:56:48.863 [World] TRACE: Setting tiles around 205,68 to hard rock
+15:56:48.863 [World] TRACE: Setting tiles around 248,74 to hard rock
+15:56:48.863 [World] TRACE: Setting tiles around 249,110 to hard rock
+15:56:48.864 [World] TRACE: Setting tiles around 242,177 to hard rock
+15:56:48.864 [World] TRACE: Setting tiles around 200,253 to hard rock
+15:56:48.864 [World] TRACE: Setting tiles around 218,229 to hard rock
+15:56:48.865 [World] TRACE: Setting tiles around 253,249 to hard rock
+15:56:48.865 [World] TRACE: Setting tiles around 223,291 to hard rock
+15:56:48.865 [World] TRACE: Setting tiles around 224,292 to hard rock
+15:56:48.865 [World] TRACE: Setting tiles around 224,318 to hard rock
+15:56:48.866 [World] TRACE: Setting tiles around 250,302 to hard rock
+15:56:59.751 [World] TRACE: Setting tiles around -228,11 to hard rock
+15:56:59.751 [World] TRACE: Setting tiles around -214,46 to hard rock
+15:56:59.752 [World] TRACE: Setting tiles around -199,245 to hard rock
+15:56:59.752 [World] TRACE: Setting tiles around -198,206 to hard rock
+15:56:59.753 [World] TRACE: Setting tiles around -223,311 to hard rock
+15:56:59.753 [World] TRACE: Setting tiles around -210,277 to hard rock
+15:57:37.960 [World] TRACE: Setting tiles around -300,-98 to hard rock
+15:57:37.960 [World] TRACE: Setting tiles around -280,-78 to hard rock
+15:57:37.960 [World] TRACE: Setting tiles around -266,-97 to hard rock
+15:57:37.961 [World] TRACE: Setting tiles around -316,-15 to hard rock
+15:57:37.961 [World] TRACE: Setting tiles around -279,6 to hard rock
+15:57:37.962 [World] TRACE: Setting tiles around -304,65 to hard rock
+15:57:37.962 [World] TRACE: Setting tiles around -298,68 to hard rock
+15:57:37.962 [World] TRACE: Setting tiles around -311,183 to hard rock
+15:57:37.963 [World] TRACE: Setting tiles around -316,242 to hard rock
+15:57:37.963 [World] TRACE: Setting tiles around -295,207 to hard rock
+15:57:37.963 [World] TRACE: Setting tiles around -281,230 to hard rock
+15:57:37.964 [World] TRACE: Setting tiles around -307,302 to hard rock
+15:57:37.964 [World] TRACE: Setting tiles around -298,278 to hard rock
+15:57:37.964 [World] TRACE: Setting tiles around -268,294 to hard rock
+15:57:37.964 [World] TRACE: Setting tiles around -266,280 to hard rock
+15:57:46.653 [World] TRACE: Setting tiles around -247,368 to hard rock
+15:57:46.653 [World] TRACE: Setting tiles around -229,337 to hard rock
+15:57:46.654 [World] TRACE: Setting tiles around -153,338 to hard rock
+15:57:46.654 [World] TRACE: Setting tiles around -128,368 to hard rock
+15:57:46.654 [World] TRACE: Setting tiles around -73,325 to hard rock
+15:57:46.655 [World] TRACE: Setting tiles around -50,383 to hard rock
+15:57:46.655 [World] TRACE: Setting tiles around -36,335 to hard rock
+15:57:46.655 [World] TRACE: Setting tiles around -35,381 to hard rock
+15:57:46.655 [World] TRACE: Setting tiles around 21,326 to hard rock
+15:57:46.656 [World] TRACE: Setting tiles around 42,353 to hard rock
+15:57:46.656 [World] TRACE: Setting tiles around 57,337 to hard rock
+15:57:46.656 [World] TRACE: Setting tiles around 61,357 to hard rock
+15:57:46.656 [World] TRACE: Setting tiles around 70,331 to hard rock
+15:57:46.657 [World] TRACE: Setting tiles around 145,369 to hard rock
+15:57:46.657 [World] TRACE: Setting tiles around 168,344 to hard rock
+15:58:11.979 [World] TRACE: Setting tiles around -380,-43 to hard rock
+15:58:11.981 [World] TRACE: Setting tiles around -383,2 to hard rock
+15:58:11.981 [World] TRACE: Setting tiles around -364,64 to hard rock
+15:58:11.982 [World] TRACE: Setting tiles around -346,97 to hard rock
+15:58:11.983 [World] TRACE: Setting tiles around -384,315 to hard rock
+15:58:11.983 [World] TRACE: Setting tiles around -352,310 to hard rock
+15:58:11.984 [World] TRACE: Setting tiles around -331,290 to hard rock
+15:58:30.765 [World] TRACE: Setting tiles around -373,-141 to hard rock
+15:58:30.766 [World] TRACE: Setting tiles around -357,-176 to hard rock
+15:58:30.766 [World] TRACE: Setting tiles around -273,-183 to hard rock
+15:58:30.767 [World] TRACE: Setting tiles around -197,-139 to hard rock
+15:58:30.767 [World] TRACE: Setting tiles around -173,-178 to hard rock
+15:58:30.767 [World] TRACE: Setting tiles around -157,-139 to hard rock
+15:58:30.768 [World] TRACE: Setting tiles around -101,-157 to hard rock
+15:58:30.768 [World] TRACE: Setting tiles around -99,-179 to hard rock
+15:58:30.768 [World] TRACE: Setting tiles around -90,-154 to hard rock
+15:58:30.768 [World] TRACE: Setting tiles around -64,-186 to hard rock
+15:58:30.769 [World] TRACE: Setting tiles around -47,-153 to hard rock
+15:58:30.769 [World] TRACE: Setting tiles around -21,-186 to hard rock
+15:58:30.769 [World] TRACE: Setting tiles around -5,-184 to hard rock
+15:58:30.769 [World] TRACE: Setting tiles around 17,-188 to hard rock
+15:58:30.769 [World] TRACE: Setting tiles around 40,-139 to hard rock
+15:58:34.806 [Game Handler] INFO: Window closing
