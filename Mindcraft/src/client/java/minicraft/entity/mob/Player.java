@@ -1374,6 +1374,8 @@ public class Player extends Mob implements ItemHolder, ClientTickable {
 	 * check if the mob is a source of blue blot
 	 */
 	private static boolean isBlueBlotSource(Mob mob) {
+		if(Game.isMode("minicraft.settings.mode.creative")){return false;}
+		else
 		return mob instanceof Slime
 			|| mob instanceof Zombie
 			|| mob instanceof Creeper
