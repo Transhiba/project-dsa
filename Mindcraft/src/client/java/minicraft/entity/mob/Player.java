@@ -59,6 +59,7 @@ import minicraft.screen.WorldSelectDisplay;
 import minicraft.util.AdvancementElement;
 import minicraft.util.Logging;
 import minicraft.util.Vector2;
+import minicraft.util.rules.BlueBlotSystem;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -1315,6 +1316,19 @@ public class Player extends Mob implements ItemHolder, ClientTickable {
 		doHurt(damage, attackDir);
 	}
 
+	/**
+	 * Hurt the player from another mob (enemy).
+	 * only track blue blot when the player is hurt by a mob that is a source of blue blot
+	 */
+	@Override
+	public void hurt(Mob mob, int damage, Direction attackDir) {
+		// Chỉ track đốm khi đây là player chính và mob thuộc nhóm được chỉ định
+		if (this == Game.player && isBlueBlotSource(mob)) {
+			BlueBlotSystem.onPlayerHurt(this);
+		}
+		super.hurt(mob, damage, attackDir);
+	}
+
 	@Override
 	protected void doHurt(int damage, Direction attackDir) {
 		if (Game.isMode("minicraft.settings.mode.creative") || hurtTime > 0 || Bed.inBed(this))
@@ -1354,6 +1368,18 @@ public class Player extends Mob implements ItemHolder, ClientTickable {
 
 		Sound.play("playerhurt");
 		hurtTime = playerHurtTime;
+	}
+
+	/**
+	 * check if the mob is a source of blue blot
+	 */
+	private static boolean isBlueBlotSource(Mob mob) {
+		return mob instanceof Slime
+			|| mob instanceof Zombie
+			|| mob instanceof Creeper
+			|| mob instanceof AirWizard
+			|| mob instanceof Knight
+			|| mob instanceof ObsidianKnight;
 	}
 
 	/**

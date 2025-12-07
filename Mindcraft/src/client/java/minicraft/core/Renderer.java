@@ -36,6 +36,7 @@ import minicraft.screen.entry.StringEntry;
 import minicraft.util.Logging;
 import minicraft.util.Quest;
 import minicraft.util.Quest.QuestSeries;
+import minicraft.util.rules.BlueBlotSystem;
 
 import javax.imageio.ImageIO;
 
@@ -209,6 +210,7 @@ public class Renderer extends Game {
 
 		level.renderBackground(screen, xScroll, yScroll); // Renders current level background
 		level.renderSprites(screen, xScroll, yScroll); // Renders level sprites on screen
+		BlueBlotSystem.renderBlueBlots(screen, player); // Overlay blue blot indicator on player
 
 		// This creates the darkness in the caves
 		if ((currentLevel != 3 || Updater.tickCount < Updater.dayLength / 4 || Updater.tickCount > Updater.dayLength / 2) && !isMode("minicraft.settings.mode.creative")) {

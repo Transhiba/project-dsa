@@ -11,7 +11,7 @@ import java.util.Random;
 public class Inventory {
 	private final List<Item> items = new ArrayList<>(); // The list of items that is in the inventory.
 
-	protected int maxItem = 27;
+	protected int maxItem = 35;
 	protected boolean unlimited = false;
 
 	public int getMaxSlots() {

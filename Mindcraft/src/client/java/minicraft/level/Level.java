@@ -81,6 +81,8 @@ public class Level {
 	private final Object entityLock = new Object(); // I will be using this lock to avoid concurrency exceptions in entities and sparks set
 	private final Set<Entity> entities = java.util.Collections.synchronizedSet(new HashSet<>()); // A list of all the entities in the world
 	private final Set<Player> players = java.util.Collections.synchronizedSet(new HashSet<>()); // A list of all the players in the world
+	private static final Set<String> shownHints = new HashSet<>(); // Tracks which contextual hints have been shown
+	private int nextNightWarningTick = 0; // cooldown tick for night monster warning
 	private final List<Entity> entitiesToAdd = new ArrayList<>(); /// entities that will be added to the level on next tick are stored here. This is for the sake of multithreading optimization. (hopefully)
 	private final List<Entity> entitiesToRemove = new ArrayList<>(); /// entities that will be removed from the level on next tick are stored here. This is for the sake of multithreading optimization. (hopefully)
 
@@ -481,8 +483,73 @@ public class Level {
 
 		mobCount = count;
 
+		if (fullTick) {
+			checkSlimeHint();
+			checkNightMonsterWarning();
+		}
+
 		if (fullTick && count < maxMobCount)
 			trySpawn();
+	}
+
+	/**
+	 * Original slime proximity hint, tách ra hàm riêng cho gọn.
+	 */
+	private void checkSlimeHint() {
+		for (Player p : players) {
+			// If we haven't shown the slime hint yet, and there's a slime near the player, show it once.
+			if (!shownHints.contains("slime_hint")) {
+				int tileX = p.x >> 4;
+				int tileY = p.y >> 4;
+				java.util.List<Entity> slimes = getEntitiesInTiles(tileX, tileY, 4, true, Slime.class);
+				if (!slimes.isEmpty()) {
+					Updater.notifyAll("Slimes are cute! Spare them, and they might save your life one day.");
+					shownHints.add("slime_hint");
+				}
+			}
+		}
+	}
+
+	/**
+	 * Thuật toán cảnh báo khi trời tối & có quái vật ở quá gần người chơi.
+	 * - Dùng khoảng cách Euclid trên toạ độ pixel.
+	 * - Duyệt tất cả EnemyMob quanh mỗi người chơi trong bán kính tile nhất định.
+	 */
+	private void checkNightMonsterWarning() {
+		// Giảm spam: chỉ kiểm tra mỗi 20 tick (~1 lần/giây tuỳ FPS logic)
+		if (Updater.tickCount % 20 != 0) return;
+
+		// if still in cooldown, skip
+		if (Updater.tickCount < nextNightWarningTick) return;
+
+		// check if it's night
+			boolean isDark = Updater.tickCount < Updater.dayLength / 4
+			|| Updater.tickCount > Updater.dayLength / 2;
+		if (!isDark) return;
+
+		// Ngưỡng "gần": 5 tile quanh người chơi, và khoảng cách Euclid <= 80 pixel
+		final int searchRadiusTiles = 5;
+		final int warningDistancePixels = 80;
+
+		for (Player p : players) {
+			int tileX = p.x >> 4;
+			int tileY = p.y >> 4;
+
+			java.util.List<Entity> monsters = getEntitiesInTiles(tileX, tileY, searchRadiusTiles, true, EnemyMob.class);
+			for (Entity e : monsters) {
+				int dx = p.x - e.x;
+				int dy = p.y - e.y;
+				double dist = Math.sqrt(dx * dx + dy * dy);
+
+				if (dist <= warningDistancePixels) {
+					Updater.notifyAll("Warning: There is a monster very close to you in the dark!");
+					// Set cooldown to about 4 seconds before showing again
+					nextNightWarningTick = Updater.tickCount + 4 * Updater.normSpeed;
+					// only notify once per call
+					return;
+				}
+			}
+		}
 	}
 
 	public void loadChunksAround(int tileX, int tileY) {

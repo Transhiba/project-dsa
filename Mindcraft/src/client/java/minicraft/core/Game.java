@@ -23,7 +23,7 @@ public class Game {
 	protected Game() {
 	} // Can't instantiate the Game class.
 
-	public static final String NAME = "Minicraft Plus"; // This is the name on the application window.
+	public static final String NAME = "Mindcraft"; // This is the name on the application window.
 
 	public static final Version VERSION = new Version("2.3.0-infdev3");
 
