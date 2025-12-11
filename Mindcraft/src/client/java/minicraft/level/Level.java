@@ -544,7 +544,7 @@ public class Level {
 				if (dist <= warningDistancePixels) {
 					Updater.notifyAll("Warning: There is a monster very close to you in the dark!");
 					// Set cooldown to about 4 seconds before showing again
-					nextNightWarningTick = Updater.tickCount + 4 * Updater.normSpeed;
+					nextNightWarningTick = Updater.tickCount + 60 * Updater.normSpeed;
 					// only notify once per call
 					return;
 				}
